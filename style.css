@@ -1,0 +1,212 @@
+/* General Styles */
+.body1 {
+    font-family: "Spectral", serif;
+    font-weight: 400;
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+    background-color: #E0DAC4; /* beige background */
+    
+}
+
+
+header {
+    background-color: #9B9859; /* green for the header */
+    text-align: left;
+    padding: 20px;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    text-align: left;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    font-family: "Spectral", serif;
+    font-weight: light; 
+    color: white;
+    text-decoration: none; 
+    font-size: 16px;
+}
+
+
+header nav ul li a:hover {
+    color: #B8390E; /* red hover on header text */
+}
+
+/* hero Section */
+#hero {
+    font-family: "Spectral", serif;
+    color:#3F4122;
+    padding: 100px 20px;
+    position: relative;
+    height: 400px;  
+   
+  
+}
+
+
+#hero h1 {
+    font-family: "citrus-gothic", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 9rem; 
+    color:#353E5B; 
+    margin: 0 0 20px 0;
+    text-align: left; 
+    position: absolute;
+    top: 50%;
+   transform: translateY(-50%); 
+}
+/*fix space between these two for smaller screens*/
+/*update!! i tried but im giving up :)))*/
+#hero p {
+    font-size: 1.25rem;
+    text-transform: lowercase;
+    font-style: italic;
+    margin-bottom: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+    position: absolute;
+    transform: translateY(250%);
+}
+
+.cta-button {
+    background-color: #B8390E; 
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    box-shadow: 2px 2px #9B9859; 
+    position: absolute;
+   
+    transform: translateY(1000%);
+}
+
+.cta-button:hover {
+    background-color: #2B3248; 
+}
+
+
+.body2 {
+    background-color:#2B3248; 
+   
+    
+    margin: 0;
+    padding: 100px;
+}
+
+.postcards {
+    list-style: none;
+    padding: 100px;
+    display: flex; /* Use flexbox to layout the items */
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    gap: 20px; /* Space between postcards */
+    justify-content: center; /* Center-align the postcards */
+}
+
+.postcards li {
+    background-color: #E0DAC4; /* Cream background for postcards */
+    border: 2px solid #B8390E; /* Solid border for the stamp */
+    padding: 100px; /* Increased padding for larger boxes */
+    border: 5px dashed #B8390E;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Drop shadow */
+    display: flex;
+    position: relative; /* For positioning of the stamp effect */
+    overflow: hidden; /* Ensure elements don't overflow */
+    transition: transform 0.2s; /* Smooth hover effect */
+    width: calc(33.33% - 70px); /* Set width for three items per row, accounting for gap */
+    min-width: 280px; /* Minimum width to ensure boxes don’t get too small */
+}
+
+.postcards li:hover {
+    transform: translateY(-5px) rotate(-2deg); /* Lift effect on hover */
+    background-color: #9B9859; /* Change background on hover */
+}
+
+
+
+.postcards h3 {
+    font-family: "citrus-gothic", sans-serif;
+    font-weight: 600;
+    color: #3F4122;
+    margin: -70px 20px 0 -70px; /* Adjust margin to give space */
+    float: left; /* Float heading to the left */
+    width: 40%; /* Set the width of the heading */
+    position: relative;
+}
+.postcards h3::after {
+    content: '';
+    position: absolute;
+    top: -10px;
+    right: -15px; /* Adjust the position to be between the heading and text */
+    width: 1px;
+    height: 180%; /* Full height of the heading */
+    background-color: #B8390E; /* Color of the vertical line */
+}
+.postcards p {
+    font-family: "citrus-gothic", sans-serif;
+font-weight: 400;
+font-style: italic;
+    font-size: 0.75rem;
+    color: #353E5B;
+    margin-bottom: 30px;
+    max-width: 800px;
+    margin: 0px 20px 10px -5px;
+    position: absolute;
+    transform: translateY(20%);
+}
+
+.body3{
+    background-color: #2B3248;
+    margin-top: 100px;
+padding: 100 px;
+}
+
+.resources {
+    list-style-type: style disc;;
+color:#E0DAC4;
+}
+.resources ul li{
+    padding: 30px;
+    margin-top: 200px;
+    font-family: "Spectral", serif;
+    font-weight: 300;
+    font-size: 1.00rem;
+    font-style: normal;
+    color:#E0DAC4;
+    text-align: left;
+    text-transform: lowercase;
+}
+
+.resources ul li:hover{
+    color: #9B9859;
+}
+
+.resources h3{
+    font-family: "Spectral", serif;
+    font-size: 1.05rem;
+    font-weight: 300;
+    font-style: italic;
+    color:#E0DAC4;
+    text-align: left;
+    text-transform: lowercase;
+}
+
+.resources p{
+    font-family: "Spectral", serif;
+    font-weight: 400;
+    font-size: 1.00rem;
+    font-style: normal;
+    color:#E0DAC4;
+    text-align: left;
+    text-transform: lowercase;
+}
