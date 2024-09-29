@@ -78,22 +78,7 @@ header nav ul li a:hover {
     transform: translateY(250%);
 }
 
-.cta-button {
-    background-color: #B8390E; 
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 5px;
-    box-shadow: 2px 2px #9B9859; 
-    position: absolute;
-   
-    transform: translateY(1000%);
-}
 
-.cta-button:hover {
-    background-color: #2B3248; 
-}
 
 
 .body2 {
