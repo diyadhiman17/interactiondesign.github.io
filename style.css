@@ -1,17 +1,21 @@
 /* General Styles */
 .body1 {
-    font-family: "Spectral", serif;
-    font-weight: 400;
-    font-style: normal;
-    margin: 0;
-    padding: 0;
-    background-color: #E0DAC4; /* beige background */
     
+    margin: 0px;
+    padding: -10px;
+    background-color: #E0DAC4; /* beige background */
+    background-image: url('images/background.png'); 
+      background-size: 1800px 2400px;
+      
+       background-position: 10px 10 px 10px 10px;     
+       background-repeat: no-repeat; 
+       height: 500vh;    
+       background-attachment: scroll;
 }
 
 
 header {
-    background-color: #9B9859; /* green for the header */
+   
     text-align: left;
     padding: 20px;
 }
@@ -31,7 +35,7 @@ header nav ul li {
 header nav ul li a {
     font-family: "Spectral", serif;
     font-weight: light; 
-    color: white;
+    color: #9B9859;
     text-decoration: none; 
     font-size: 16px;
 }
@@ -45,41 +49,75 @@ header nav ul li a:hover {
 #hero {
     font-family: "Spectral", serif;
     color:#3F4122;
-    padding: 100px 20px;
-    position: relative;
-    height: 400px;  
+    padding: 50px 20px;
+    text-align: left;   
+     max-width: 1200px; 
+     margin: 0 auto;
+    
    
   
 }
 
 
 #hero h1 {
+    position: fixed;
     font-family: "citrus-gothic", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 9rem; 
-    color:#353E5B; 
-    margin: 0 0 20px 0;
-    text-align: left; 
-    position: absolute;
-    top: 50%;
-   transform: translateY(-50%); 
+    font-weight: 200;
+    font-size: 8rem; 
+    color:#B8390E; 
+    left: 45%;
+    top:45%;
+    text-align: center;
+    transform: translateX(-50%);
+    white-space: nowrap;
+ padding: 0;
+    margin: 0;
+    z-index: 10;
+    
+
 }
 /*fix space between these two for smaller screens*/
 /*update!! i tried but im giving up :)))*/
-#hero p {
-    font-size: 1.25rem;
-    text-transform: lowercase;
-    font-style: italic;
-    margin-bottom: 30px;
-    max-width: 1000px;
-    margin: 0 auto;
+
+
+
+
+.photo-gallery {
     position: absolute;
-    transform: translateY(250%);
+    top: 145%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    gap: 20px; /* Add space between photos */
 }
+.photo-gallery img {
+    width: 800px;
+    height: 800px;
+    object-fit: cover; 
+   mix-blend-mode: multiply;
+}
+.photo-gallery img:nth-child(2) {
+    position: relative;
+    top: 850px;  /* Move the second image 50px down */
+    left: -220px; /* Move the second image 30px to the left */
+}
+@media (max-width: 768px) {
+    .content-wrapper {
+        flex-direction: column; /* Stack image and text on smaller screens */
+    }
 
+    .content-wrapper img {
+        width: 100%; /* Make image full width on smaller screens */
+    }
 
+    .content-wrapper p {
+        max-width: 100%;
+    }
 
+    #vintage-layout h1 {
+        font-size: 3rem; /* Reduce title size for smaller screens */
+    }
+}
 
 .body2 {
     background-color:#2B3248; 
