@@ -266,3 +266,30 @@ color:#E0DAC4;
     text-align: left;
     text-transform: lowercase;
 }
+
+.body4{
+    background-color: #E0DAC4;
+    background-image: url('images/texture1.png'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-blend-mode:color-burn;
+    font-family: "Spectral", serif;
+    font-size: 1.5rem;
+    font-weight: 300;
+    font-style: italic;
+    color:#353E5B;
+    padding: 600px 120px 0px 120px;
+
+}
+
+.body p{
+    
+    font-family: "Spectral", serif;
+    font-size: 1.05rem;
+    font-weight: 300;
+    font-style: italic;
+    color:#353E5B;
+    text-align: left;
+    text-transform: lowercase;
+}
