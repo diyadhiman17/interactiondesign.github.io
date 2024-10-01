@@ -121,7 +121,14 @@ header nav ul li a:hover {
 
 .body2 {
     background-color:#2B3248; 
+    
+
+    background-image: url('images/texture1.png'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
    
+   background-blend-mode:multiply;
     
     margin: 0;
     padding: 100px;
@@ -137,6 +144,7 @@ header nav ul li a:hover {
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     
+    z-index:1;
    
 
 }
@@ -153,6 +161,8 @@ header nav ul li a:hover {
     transition: transform 0.2s; /* Smooth hover effect */
     width: 1000px;
     scroll-snap-align: center;
+    z-index:1;
+    
 }
 
 .postcards li:hover {
