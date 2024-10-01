@@ -205,17 +205,29 @@ font-style: italic;
 
 .body3{
     background-color: #2B3248;
-    margin-top: 100px;
-padding: 100 px;
+    background-image: url('images/texture1.png'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+   
+   background-blend-mode:multiply;
+    margin-top: 120px;
+padding: 10px;
 }
 
 .resources {
-    list-style-type: style disc;;
+    list-style-type: style disc;
 color:#E0DAC4;
+
 }
+.resources ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; }
+
 .resources ul li{
-    padding: 30px;
-    margin-top: 200px;
+    padding: 50px;
+    margin-top: 50px;
     font-family: "Spectral", serif;
     font-weight: 300;
     font-size: 1.00rem;
@@ -225,10 +237,16 @@ color:#E0DAC4;
     text-transform: lowercase;
 }
 
-.resources ul li:hover{
-    color: #9B9859;
+.resources a {
+    color: #E0DAC4; /* Beige color for the links */
+    text-decoration: none; /* Remove underline */
+    font-weight: inherit; /* Inherit weight from surrounding text */
 }
 
+.resources a:hover {
+    color: #9B9859; /* Green color on hover */
+    text-decoration: none; /* Ensure underline doesn't appear on hover */
+}
 .resources h3{
     font-family: "Spectral", serif;
     font-size: 1.05rem;
