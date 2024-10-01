@@ -7,7 +7,7 @@
     background-image: url('images/background.png'); 
       background-size: 1800px 2400px;
       
-       background-position: 10px 10 px 10px 10px;     
+       background-position: 10px -100px 10px -100px;
        background-repeat: no-repeat; 
        height: 500vh;    
        background-attachment: scroll;
@@ -98,7 +98,7 @@ header nav ul li a:hover {
 }
 .photo-gallery img:nth-child(2) {
     position: relative;
-    top: 850px;  /* Move the second image 50px down */
+    top: 500px;  /* Move the second image 50px down */
     left: -220px; /* Move the second image 30px to the left */
 }
 @media (max-width: 768px) {
@@ -129,25 +129,30 @@ header nav ul li a:hover {
 
 .postcards {
     list-style: none;
-    padding: 100px;
+    padding: 250px 5px;
     display: flex; /* Use flexbox to layout the items */
-    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    flex-wrap: nowrap; /* Allow items to wrap to the next line */
     gap: 20px; /* Space between postcards */
-    justify-content: center; /* Center-align the postcards */
+    justify-content: flex-start;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    
+   
+
 }
 
 .postcards li {
     background-color: #E0DAC4; /* Cream background for postcards */
     border: 2px solid #B8390E; /* Solid border for the stamp */
-    padding: 100px; /* Increased padding for larger boxes */
+    padding: 100px 500px 100px 100px; /* Increased padding for larger boxes */
     border: 5px dashed #B8390E;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Drop shadow */
     display: flex;
     position: relative; /* For positioning of the stamp effect */
     overflow: hidden; /* Ensure elements don't overflow */
     transition: transform 0.2s; /* Smooth hover effect */
-    width: calc(33.33% - 70px); /* Set width for three items per row, accounting for gap */
-    min-width: 280px; /* Minimum width to ensure boxes don’t get too small */
+    width: 1000px;
+    scroll-snap-align: center;
 }
 
 .postcards li:hover {
@@ -169,10 +174,10 @@ header nav ul li a:hover {
 .postcards h3::after {
     content: '';
     position: absolute;
-    top: -10px;
-    right: -15px; /* Adjust the position to be between the heading and text */
+    top: 0px;
+    right: -130px; /* Adjust the position to be between the heading and text */
     width: 1px;
-    height: 180%; /* Full height of the heading */
+    height: 130%; /* Full height of the heading */
     background-color: #B8390E; /* Color of the vertical line */
 }
 .postcards p {
@@ -183,7 +188,7 @@ font-style: italic;
     color: #353E5B;
     margin-bottom: 30px;
     max-width: 800px;
-    margin: 0px 20px 10px -5px;
+    margin: 20px 50px 10px 100px;
     position: absolute;
     transform: translateY(20%);
 }
