@@ -1,4 +1,9 @@
 /* General Styles */
+img, embed, 
+object, video {                              
+max-width: 100%; 
+}  
+
 .body1 {
     
     margin: 0px;
@@ -148,6 +153,15 @@ header nav ul li a:hover {
    
 
 }
+.postcard-link {
+    text-decoration: none; /* Remove underline */
+    color: inherit;       /* Inherit text color from parent */
+}
+
+.postcard-link:hover {
+    color:#B8390E;          /* Change color to red on hover */
+}
+
 
 .postcards li {
     background-color: #E0DAC4; /* Cream background for postcards */
@@ -162,6 +176,15 @@ header nav ul li a:hover {
     width: 1000px;
     scroll-snap-align: center;
     z-index:1;
+    
+}
+.stamp {
+    position: absolute;  
+    top: -90px;          
+    right: -150px;         
+    width: 300px;       
+    height: auto;        
+    z-index: 2;          
     
 }
 
@@ -198,10 +221,11 @@ font-style: italic;
     color: #353E5B;
     margin-bottom: 30px;
     max-width: 800px;
-    margin: 20px 50px 10px 100px;
+    margin: 100px 50px 10px 100px;
     position: absolute;
     transform: translateY(20%);
 }
+
 
 .body3{
     background-color: #2B3248;
@@ -293,3 +317,97 @@ color:#E0DAC4;
     text-align: left;
     text-transform: lowercase;
 }
+/* Container for the entire section */
+.body6 {
+    overflow: hidden;
+    background-color: #E0DAC4;
+    width: 1103px;
+    height: 816px;
+    position: absolute;
+  }
+  
+  /* Navigation bar styles */
+  .nav-links {
+    color: #9B9859;
+    width: 535px;
+    height: 50px;
+    position: absolute;
+    left: 30px;
+    top: 38px;
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    text-align: left;
+  }
+  
+  /* Carousel controls */
+  .carousel-control {
+    color: #9B9859;
+    font-family: 'spectral', serif;
+    font-size: 16px;
+  }
+  
+  .previous {
+    width: 135px;
+    height: 30px;
+    position: absolute;
+    left: 40px;
+    top: 108px;
+  }
+  
+  .next {
+    width: 160px;
+    height: 30px;
+    position: absolute;
+    left: 1450px;
+    top: 108px;
+  }
+  
+  a.control {
+    text-decoration: none;  /* Removes the underline */
+    color: #9B9859;         /* Inherits the text color from the parent element */
+}
+
+a.control:hover {
+    color:#B8390E;            /* Changes text color to red on hover */
+    text-decoration: none; /* Ensures no underline appears on hover */
+}
+  
+  /* Headline text */
+  .headline {
+    color: rgba(33, 44, 56, 1);
+    width: 524px;
+    height: 134px;
+    position: absolute;
+    left: 800px;
+    right:30px;
+    top: 356px;
+    font-family: 'Spectral', serif;
+    font-size: 38px;
+    text-align: left;
+    text-transform: lowercase;
+  }
+  
+  /* Paragraph text */
+  .description {
+    color: #353E5B;
+    width: 491px;
+    height: 177px;
+    position: absolute;
+    left: 800px;
+    right:25px;
+    top: 525px;
+    font-family: 'Spectral', serif;
+    font-size: 12px;
+    text-align: left;
+  }
+  
+  img {
+    display: block;
+    max-width: 50%;
+    height: auto;
+    margin: 100px 50px 50px 5px;
+    object-fit: contain;
+    margin-left: 0;
+    margin-right: auto;
+}
+  
