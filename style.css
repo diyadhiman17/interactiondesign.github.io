@@ -5,26 +5,240 @@ max-width: 100%;
 }  
 
 .body1 {
-    
-    margin: 0px;
-    padding: -10px;
-    background-color: #E0DAC4; /* beige background */
-    background-image: url('images/background.png'); 
-      background-size: 1800px 2400px;
-      
-       background-position: 10px -100px 10px -100px;
-       background-repeat: no-repeat; 
-       height: 500vh;    
-       background-attachment: scroll;
+    background-color: #7a3411;
+   
 }
 
+.image-1{
+    position:relative;
+    margin-top: 60px;
+    margin-left:800px;
+    transform:scale(2.5);
+    opacity:0;
+    
+    z-index:1;
+    animation: pop .1s ease forwards;
+    animation-delay: 0s;
+    transform-origin: center center;
+    
+}
+.image-2{
+    position:absolute;
+    margin-top:-500px;
+    margin-left:-80px;
+    transform:scale(2);
+    opacity:0;
+    z-index:1;
+    animation: pop .1s ease forwards;
+    animation-delay:0.2s;
+    transform-origin: center center;
+}
+.image-3{
+    position:absolute;
+    margin-top:-100px;
+    margin-left:500px;
+    transform:scale(1.5);
+    opacity:0;
+    z-index:1;
+    animation: pop .1s ease forwards;
+    animation-delay:.4s;
+    transform-origin: center center;
+}
+.image-4{
+    position:absolute;
+    margin-top:-200px;
+    margin-left:-100px;
+    transform:scale(2.5);
+    opacity:0;
+    z-index:-1;
+    animation: pop .1s ease forwards;
+    animation-delay:.6s;
+    transform-origin: center center;
+}
+.image-5{
+    position:absolute;
+    margin-top:-600px;
+    margin-left:40px;
+    transform:scale(1.5);
+    opacity:0;
+    z-index:1;
+    animation: pop .1s ease forwards;
+    animation-delay:.8s;
+    transform-origin: center center;
+}
+.image-6{
+    
+    position:absolute;
+    margin-top:-190px;
+    margin-left:900px;
+    transform:scale(1.5);
+    opacity:0;
+    z-index:1;
+    animation: pop .1s ease forwards;
+    animation-delay:1s;
+    transform-origin: center center;
+}
+.image-7{
+    position:absolute;
+    margin-top:-700px;
+    margin-left:400px;
+    transform:scale(1.2);
+    opacity:0;
+    z-index:1;
+    animation: pop .1s ease forwards;
+    animation-delay:1.2s;
+    transform-origin: center center;
+}
+.image-8{
+    position:absolute;
+    margin-top:-200px;
+    margin-left:-200px;
+    transform:scale(1.5);
+    opacity:0;
+    z-index:1;
+    animation: pop .1s ease forwards;
+    animation-delay:1.4s;
+    transform-origin: center center;
+
+
+}
+.image-9{
+    position:absolute;
+    margin-top:-500px;
+    margin-left:600px;
+    opacity:0;
+    z-index:1;
+    transform:scale(1.2);
+    animation: pop .1s ease forwards;
+    animation-delay:1.6s;
+    transform-origin: center center;
+}
+.image-10{
+    position:absolute;
+    margin-top:-160px;
+    margin-left:450px;
+    opacity:0;
+    z-index:1;
+    transform:scale(1.3);
+    animation: pop .1s ease forwards;
+    animation-delay:1.8s;
+    transform-origin: center center;
+}
+.image-11{
+    position:absolute;
+    margin-top:-650px;
+    margin-left:-500px;
+    opacity:0;
+    z-index:1;
+   transform: scale(0.3);
+    animation: pop .1s ease forwards;
+    animation-delay:2s;
+    transform-origin: center center;
+}
+.image-12{
+    position:absolute;
+    margin-top:-400px;
+    margin-left:900px;
+    opacity:0;
+    z-index:1;
+    transform:scale(0.3);
+    animation: pop .1s ease forwards;
+    animation-delay:2.2s;
+    transform-origin: center center;
+}
+.image-13{
+    position:relative;
+    margin-top:-350px;
+    margin-left:300px;
+   transform:scale(2);
+    z-index:1;
+    opacity:0;
+    
+    animation: pop .1s ease forwards;
+    animation-delay:2.6s;
+    transform-origin: center center;
+}
+
+
+@keyframes pop{
+    from{
+        opacity:0;
+    }
+    to{
+        opacity:1;
+        
+    }
+}
 
 header {
    
     text-align: left;
-    padding: 20px;
+    padding: 10px;
+    z-index:20;
+    position: relative;
 }
 
+
+
+/* hero Section */
+#hero {
+    font-family: "Spectral", serif;
+    color:#E0DAC4;
+    padding: 50px 20px;
+    text-align: left;   
+     max-width: 1200px; 
+     margin: 0 auto;
+    
+   
+  
+}
+
+
+#hero h1 {
+    position: absolute;
+    font-family: "bulletin-typewriter-mn", sans-serif;
+font-weight: 20;
+font-style: normal;
+    font-size: 15px; 
+    color:white; 
+    left:35.5%;
+    top:42%;
+    text-align: center;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    border-right: 8px solid transparent;
+    
+ 
+    z-index: 10;
+    overflow: hidden;
+    width:0;
+    max-width:max-content;
+    animation: typing 8s steps(40,end) 3s forwards,
+     blink .75s step-end 2.6s infinite alternate;
+
+}
+/*fix space between these two for smaller screens*/
+/*update!! i tried but im giving up :)))*/
+
+@keyframes typing {
+    from {
+        width: 0; /* Start with no visible text */
+    }
+    to {
+        width: 100%; /* Reveal the entire text */
+    }
+}
+@keyframes blink {
+    0% {
+        border-right-color: #E0DAC4; /* Visible color */
+    }
+    50% {
+        border-right-color: transparent; /* Hide cursor */
+    }
+    100% {
+        border-right-color: #E0DAC4; /* Show cursor again */
+    }
+}
 header nav ul {
     list-style: none;
     margin: 0;
@@ -47,72 +261,18 @@ header nav ul li a {
 
 
 header nav ul li a:hover {
-    color: #B8390E; /* red hover on header text */
-}
-
-/* hero Section */
-#hero {
-    font-family: "Spectral", serif;
-    color:#3F4122;
-    padding: 50px 20px;
-    text-align: left;   
-     max-width: 1200px; 
-     margin: 0 auto;
-    
-   
-  
+    color:#E0DAC4;
+    cursor:pointer;
 }
 
 
-#hero h1 {
-    position: fixed;
-    font-family: "citrus-gothic", sans-serif;
-    font-weight: 200;
-    font-size: 8rem; 
-    color:#B8390E; 
-    left: 45%;
-    top:45%;
-    text-align: center;
-    transform: translateX(-50%);
-    white-space: nowrap;
- padding: 0;
-    margin: 0;
-    z-index: 10;
-    
-
-}
-/*fix space between these two for smaller screens*/
-/*update!! i tried but im giving up :)))*/
-
-
-
-
-.photo-gallery {
-    position: absolute;
-    top: 145%;
-    left: 60%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    gap: 20px; /* Add space between photos */
-}
-.photo-gallery img {
-    width: 800px;
-    height: 800px;
-    object-fit: cover; 
-   mix-blend-mode: multiply;
-}
-.photo-gallery img:nth-child(2) {
-    position: relative;
-    top: 500px;  /* Move the second image 50px down */
-    left: -220px; /* Move the second image 30px to the left */
-}
-@media (max-width: 768px) {
+/*@media (max-width: 768px) {
     .content-wrapper {
-        flex-direction: column; /* Stack image and text on smaller screens */
+        flex-direction: column; 
     }
 
     .content-wrapper img {
-        width: 100%; /* Make image full width on smaller screens */
+        width: 100%; 
     }
 
     .content-wrapper p {
@@ -120,123 +280,217 @@ header nav ul li a:hover {
     }
 
     #vintage-layout h1 {
-        font-size: 3rem; /* Reduce title size for smaller screens */
+        font-size: 3rem; 
     }
-}
+}*/
 
 .body2 {
-    background-color:#2B3248; 
-    
-
-    background-image: url('images/texture1.png'); 
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-   
-   background-blend-mode:multiply;
-    
+    background-color:#7a3411;
     margin: 0;
     padding: 100px;
+    overflow-y: auto; /* Enable vertical scrolling */
 }
 
-.postcards {
-    list-style: none;
-    padding: 250px 5px;
-    display: flex; /* Use flexbox to layout the items */
-    flex-wrap: nowrap; /* Allow items to wrap to the next line */
-    gap: 20px; /* Space between postcards */
-    justify-content: flex-start;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    
-    z-index:1;
-   
 
-}
 .postcard-link {
-    text-decoration: none; /* Remove underline */
-    color: inherit;       /* Inherit text color from parent */
+    text-decoration: none; 
+    
 }
 
-.postcard-link:hover {
-    color:#B8390E;          /* Change color to red on hover */
-}
+
 
 
 .postcards li {
-    background-color: #E0DAC4; /* Cream background for postcards */
-    border: 2px solid #B8390E; /* Solid border for the stamp */
-    padding: 100px 500px 100px 100px; /* Increased padding for larger boxes */
-    border: 5px dashed #B8390E;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Drop shadow */
-    display: flex;
-    position: relative; /* For positioning of the stamp effect */
-    overflow: hidden; /* Ensure elements don't overflow */
-    transition: transform 0.2s; /* Smooth hover effect */
-    width: 1000px;
-    scroll-snap-align: center;
-    z-index:1;
     
+   
+    
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+    overflow: hidden; 
+    z-index:1;
+    position: relative;
+    list-style-type:none;
 }
+
 .stamp {
     position: absolute;  
-    top: -90px;          
-    right: -150px;         
+    top: -80px;          
+    right: -120px;         
     width: 300px;       
     height: auto;        
     z-index: 2;          
     
 }
+.postcard-1 {
+    background-color: #E0DAC4; 
+  height:300px;
+  width: 500px;
+  top: -50px;
+  left: 800px;
 
-.postcards li:hover {
-    transform: translateY(-5px) rotate(-2deg); /* Lift effect on hover */
-    background-color: #9B9859; /* Change background on hover */
 }
+
+.postcard-2 {
+    background-color: #cabfa1;
+    height:300px;
+  width: 500px;
+  top:-60px;
+  left: 600px;
+   
+}
+
+.postcard-3 {
+    background-color: #E0DAC4; 
+    height:300px;
+    width: 500px;
+    top:-10px;
+    left: 200px;
+}
+.postcard-4 {
+    background-color:#cabfa1 ; 
+    height:300px;
+    width: 500px;
+    top:40px;
+    left: -10px;
+}
+.postcard-5 {
+    background-color: #E0DAC4; 
+    height:300px;
+    width: 500px;
+    top:-20px;
+    left: 400px;
+}
+.postcard-6 {
+    background-color: #cabfa1; 
+    height:300px;
+    width: 500px;
+    top:20px;
+    left: 800px;
+}
+.postcard-7 {
+    background-color: #E0DAC4; 
+    height:300px;
+    width: 500px;
+    top:20px;
+    left: 100px;
+}
+.postcard-8 {
+    background-color: #cabfa1; 
+    height:300px;
+    width: 500px;
+    top:20px;
+    left: 20px;
+}
+.postcard-9 {
+    background-color: #E0DAC4; 
+    height:300px;
+    width: 500px;
+    top:60px;
+    left: 500px;
+}
+.postcard-10{
+    background-color: #cabfa1; 
+    height:300px;
+    width: 500px;
+    top:100px;
+    left: 800px;
+}
+.postcard-11{
+    background-color: #E0DAC4; 
+    height:300px;
+    width: 500px;
+    top:100px;
+    left: 200px;
+}
+.postcard-12{
+    background-color: #cabfa1; 
+    height:300px;
+    width: 500px;
+    top:80px;
+    left: 70px;
+}
+
+/*
+.postcards li:hover {
+    transform: scale(1)  ; 
+    transition: transform 0.5s ease-in-out; 
+    z-index: 2;
+}*/
 
 
 
 .postcards h3 {
-    font-family: "citrus-gothic", sans-serif;
-    font-weight: 600;
+    position:absolute;
+    font-family: "spectral";
+font-weight: 600;
+font-style: normal;
     color: #3F4122;
-    margin: -70px 20px 0 -70px; /* Adjust margin to give space */
-    float: left; /* Float heading to the left */
-    width: 40%; /* Set the width of the heading */
+    top:-10px;
+    left : 20px;
+   
+    font-size: 1.5rem;
+    width: 40%;
     position: relative;
+    transform-origin: left; /* keep the heading anchored to the left */
 }
 .postcards h3::after {
     content: '';
     position: absolute;
     top: 0px;
-    right: -130px; /* Adjust the position to be between the heading and text */
+    right: -130px; 
     width: 1px;
-    height: 130%; /* Full height of the heading */
-    background-color: #B8390E; /* Color of the vertical line */
+    height: 100px; 
+    background-color: #B8390E; 
 }
 .postcards p {
-    font-family: "citrus-gothic", sans-serif;
+    font-family: "spectral";
 font-weight: 400;
-font-style: italic;
-    font-size: 0.75rem;
+font-style: normal;
+    font-size: 0.6rem;
     color: #353E5B;
-    margin-bottom: 30px;
+  bottom:10px;
     max-width: 800px;
     margin: 100px 50px 10px 100px;
     position: absolute;
-    transform: translateY(20%);
+    
 }
-
+/*.postcards li:hover h3, .postcards li:hover p {
+    font-size: 1.8rem; 
+    transform: scale(1); 
+    transition: font-size 0.2s ease-in-out;
+}*/
+.postcards li:hover {
+    animation:fun-pop 0.8s ease-in-out forwards ;
+    border: 4px dashed #7a3411;
+    z-index:5;
+}
+@keyframes fun-pop {
+    0% {
+        transform: scale(1) rotate(0deg);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        background-color: #E0DAC4;
+    }
+    30% {
+        transform: scale(1.08) rotate(1deg);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        background-color:#C0BB95 ; /* Subtle color change */
+    }
+    60% {
+        transform: scale(1.02) rotate(2deg);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+    }
+    100% {
+        transform: scale(1.08) rotate(0deg);
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+        background-color: #E0DAC4;
+    }}
 
 .body3{
-    background-color: #2B3248;
-    background-image: url('images/texture1.png'); 
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    background-color: #7a3411;
    
-   background-blend-mode:multiply;
+    background-size: cover;
+    background-blend-mode:multiply;
     margin-top: 120px;
-padding: 10px;
+    padding: 10px;
 }
 
 .resources {
@@ -253,7 +507,7 @@ color:#E0DAC4;
     padding: 50px;
     margin-top: 50px;
     font-family: "Spectral", serif;
-    font-weight: 300;
+    font-weight: 250;
     font-size: 1.00rem;
     font-style: normal;
     color:#E0DAC4;
@@ -289,6 +543,21 @@ color:#E0DAC4;
     color:#E0DAC4;
     text-align: left;
     text-transform: lowercase;
+}
+.hover-image {
+    display: none;
+    position: absolute;
+    top: 10px;  /* Adjust for position relative to the title */
+    left: 800px; /* Adjust for horizontal positioning */
+    width: 400px; /* Adjust image size */
+    z-index: 10;
+   
+}
+
+/* Show the image when h3 is hovered */
+.resources h3:hover + .hover-image {
+    display: block;
+    animation: pop .1s ease forwards;
 }
 
 .body4{
@@ -371,9 +640,17 @@ a.control:hover {
     color:#B8390E;            /* Changes text color to red on hover */
     text-decoration: none; /* Ensures no underline appears on hover */
 }
-  
-  /* Headline text */
-  .headline {
+
+@keyframes slideIn {
+    0% {
+        top: -1000px; 
+    }
+    100% {
+        top: -10px; 
+        
+    }
+}
+.headline {
     color: rgba(33, 44, 56, 1);
     width: 524px;
     height: 134px;
@@ -409,5 +686,15 @@ a.control:hover {
     object-fit: contain;
     margin-left: 0;
     margin-right: auto;
+    animation: fadeIn 2s ease-in forwards;
+}
+
+@keyframes fadeIn{
+    0%{
+        opacity:0;
+    }
+    100%{
+        opacity:100%
+    }
 }
   
