@@ -491,23 +491,24 @@ font-style: normal;
    
     background-size: cover;
     background-blend-mode:multiply;
-    margin-top: 120px;
+    
     padding: 10px;
+    margin-left:20px;
 }
 
 .resources {
-    list-style-type:circle;
+    list-style-type:disc;
 color:#E0DAC4;
 
 }
-.resources ul {
-    display: flex;
-    flex-direction: column;
-    gap: 10px; }
+ul.resources  {
+  
+    gap: 20px; }
 
-.resources ul li{
-    padding: 50px;
-    margin-top: 50px;
+ul.resources  li{
+    padding: 10px;
+    margin-top: 10px;
+    gap:100px;
     font-family: "Spectral", serif;
     font-weight: 250;
     font-size: 1.00rem;
@@ -780,7 +781,7 @@ a.control:hover {
 
   }
   .submit-button {
-    background-color: #275070; /* Button background color */
+    background-color: #353E5B; /* Button background color */
     color: #fff; /* Text color */
     padding: 10px 20px; /* Padding for the button */
     font-size: 1rem;
@@ -792,12 +793,10 @@ a.control:hover {
 }
 
 .submit-button:hover {
-    background-color:#1A3A5B; /* Change color on hover */
+    background-color:#9B9859; /* Change color on hover */
 }
 
-.submit-button:active {
-    background-color:#9B9859; /* Color when clicked */
-}
+
 
 .end h1{
     text-align: center; /* Centers the text and button */
