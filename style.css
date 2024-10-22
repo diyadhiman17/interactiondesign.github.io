@@ -785,22 +785,63 @@ a.control:hover {
     color: #fff; /* Text color */
     padding: 10px 20px; /* Padding for the button */
     font-size: 1rem;
-    margin-left:700px;
+    margin-top: 20px;
+    margin-left:200px;
     border: none; /* Remove default border */
     border-radius: 5px; /* Rounded corners */
     cursor: pointer;
-    transition: background-color 0.3s ease; /* Transition effect */
+    transition: background-color 0.3s ease;
+    animation: float 3s ease-in-out infinite;
 }
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
 
 .submit-button:hover {
     background-color:#9B9859; /* Change color on hover */
 }
+form {
+    max-width: 600px; /* Set a max width for the form */
+    margin: 50px 500px; /* Center the form on the page */
+    padding: 20px; /* Add some padding around the form */
+    background-color: #F3E1C0; /* Light background color for the form */
+    border-radius: 10px; /* Rounded corners for the form */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+}
+
+/* Styles for Input Fields */
+input, textarea {
+    width: 100%; /* Make inputs take full width */
+    padding: 10px; /* Padding for input fields */
+    margin: 10px 0; /* Margin for spacing between fields */
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 1rem; /* Font size for readability */
+    transition: border-color 0.3s ease; /* Transition effect for border color */
+}
+
+/* Input Fields on Focus */
+input:focus, textarea:focus {
+    border-color: #353E5B; /* Change border color on focus */
+    outline: none; /* Remove default outline */
+}
+
 
 
 
 .end h1{
     text-align: center; /* Centers the text and button */
-    margin-top: 400px; /* Adds space above the section */
+    margin-top: 200px; /* Adds space above the section */
     color:#C0BB95;
     font-weight: 100;
+    opacity: 0;    animation: fadeIn 3s ease forwards;    animation-delay: 0.1s;
 }
