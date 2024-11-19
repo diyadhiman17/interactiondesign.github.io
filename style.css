@@ -669,7 +669,8 @@ ul.resources  {
 
 ul.resources  li{
     padding: 10px;
-    margin-top: 10px;
+    margin-top: 20px;
+    margin-left: 50px;
     gap:100px;
     font-family: "Spectral", serif;
     font-weight: 250;
