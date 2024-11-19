@@ -745,11 +745,12 @@ ul.resources  li{
 
 
 .image img {
+    position:fixed;
     transform:scale(1.7);
-    max-width: 300px;
+    max-width: 250px;
 
-    
-    margin-left:1050px;
+    margin-top: -250px;
+    margin-left:1000px;
 }
 
 .about-content h1 {
@@ -766,7 +767,7 @@ ul.resources  li{
 }
 .about-content h2{
     margin-top: 50px;
-    margin-left:950px;
+    margin-left:50px;
     font-size: 1.2rem;
     max-width:200px;
     font-weight:100;
@@ -776,7 +777,7 @@ ul.resources  li{
 }
 .about-content h3{
     margin-top: 50px;
-    margin-left:950px;
+    margin-left:50px;
     font-size: .8rem;
     max-width:500px;
     font-weight:100;
@@ -785,8 +786,8 @@ ul.resources  li{
    
 }
 .about-content h4{
-    margin-top: 160px;
-    margin-left:950px;
+    margin-top: 60px;
+    margin-left:50px;
     font-size: .8rem;
     max-width:500px;
     font-weight:100;
@@ -795,7 +796,7 @@ ul.resources  li{
 }
 .about-content h5{
     margin-top: 50px;
-    margin-left:950px;
+    margin-left:50px;
     font-size: .8rem;
     max-width:500px;
     font-weight:100;
@@ -804,7 +805,7 @@ ul.resources  li{
 }
 .about-content h6{
     margin-top: 50px;
-    margin-left:950px;
+    margin-left:50px;
     font-size: .8rem;
     max-width:500px;
     font-weight:100;
