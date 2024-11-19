@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Draggable Sticky Notes</title>
+  <link rel="stylesheet" href="inputs.css">
+  <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+  <style>
+    /* Additional CSS for positioning the text above the button */
+    #button-container {
+     
+     position:fixed;
+     bottom:70px;
+     right:20px;
+    }
+    
+    #suggestions-text {
+font-weight: 50;
+      font-size: 50px;
+      color: #E0DAC4;
+      margin-bottom: 8px; /* Space between the text and the button */
+      font-weight: bold;
+    }
+    
+    
+    
+    
+  </style>
+   <header>
+    <nav>
+        <ul>
+            <li><a href="index.html">home</a></li>
+            <li><a href="page3.html">about</a></li>
+            <li><a href="page1.html">blog</a></li>
+            <li><a href="page2.html">resources</a></li>
+            <li><a href="inputs.html">suggest</a></li>
+        </ul>
+    </nav>
+</header>
+</head>
+<body>
+  <div id="notes-container"></div>
+  <div id="button-container">
+    <div id="suggestions-text">have more suggestions? tell us!</div>
+    <button id="add-note-btn">+ add</button>
+  </div>
+  <script src="input.js"></script>
+</body>
+</html>

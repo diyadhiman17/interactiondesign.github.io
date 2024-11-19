@@ -1,0 +1,147 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #330000;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Position the header at the top-left without a background */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; /* Header takes the full width */
+    padding: 10px 20px; /* Adjust padding as needed */
+    box-sizing: border-box; /* Include padding in the width calculation */
+    z-index: 1000; /* Ensure it stays on top */
+    background: none; /* No background */
+    color: #E0DAC4; /* Text color */
+}
+
+/* Navigation within the header */
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: left; /* Align links to the left */
+}
+
+header nav ul li {
+    margin-right: 25px; /* Space between navigation items */
+}
+
+header nav ul li a {
+    font-family: "Spectral", serif;
+    font-weight: light; 
+    color: #9B9859;
+    text-decoration: none; 
+    font-size: 16px;
+}
+
+header nav ul li a:hover {
+    color: #E0DAC4;
+    cursor: pointer;
+}
+
+/* Styling for other page elements */
+#notes-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin-top: 60px; /* Add space for the header */
+}
+
+#button-container {
+    position: fixed;
+    bottom: 70px;
+    right: 20px;
+}
+
+#suggestions-text {
+    font-weight: 50;
+    font-size: 50px;
+    color: #E0DAC4;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+/* Add Note Button */
+#add-note-btn {
+    background: none;
+    border: none;
+    color: #E0DAC4;
+    font-size: 30px;
+    font-family: Arial, sans-serif;
+    cursor: pointer;
+    margin: 10px;
+    padding: 0;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+#add-note-btn:hover {
+    transform: scale(1.2);
+}
+
+/* Sticky note base styles */
+.sticky-note {
+    position: absolute;
+    width: 200px;
+    height: 150px;
+    padding: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    overflow-wrap: break-word;
+    cursor: grab;
+}
+
+.sticky-note.pink {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.sticky-note.green {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.sticky-note.blue {
+    background-color: #d1ecf1;
+    color: #0c5460;
+}
+
+.sticky-note.yellow {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+.sticky-note:active {
+    cursor: grabbing;
+}
+
+.delete-btn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: 18px;
+    color: #555;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    line-height: 1;
+}
+
+.delete-btn:hover {
+    color: red;
+    font-size: 20px;
+}

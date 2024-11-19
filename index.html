@@ -24,13 +24,14 @@
                 <li><a href="page3.html">about</a></li>
                 <li><a href="page1.html">blog</a></li>
                 <li><a href="page2.html">resources</a></li>
+                <li><a href="inputs.html">suggest</a></li>
             </ul>
         </nav>
     </header>
 
     <!-- Hero Section -->
     <section id="hero">
-        <h1>notes from the future.</h1>
+        <h1 id="text">notes from the future.</h1>
         <div class="img-container">
             <img class="image-1" src="images/portrait of u.png" alt="Image 1">
             <img class="image-2" src="images/nycity.png" alt="Image 2">
@@ -54,10 +55,40 @@
             <img class="image-20" src="images/text.png" alt="Image-20">
             <img class="image-21" src="images/i know.png" alt="Image-21">
             <img class="image-22" src="images/ingredients.png" alt="Image-22">
+            <img class="image-23" src="images/sure.png" alt="Image-23">
+            <img class="image-24" src="images/fleabag.png" alt="Image-24">
+            <img class="image-25" src="images/together.png" alt="Image-25">
+            <img class="image-26" src="images/poem.png" alt="Image-26">
 
 
         </div>
-        
+        <script>
+            let typed = false; // Flag to prevent re-typing
+    
+            window.addEventListener('scroll', () => {
+                const scrollPosition = window.scrollY + window.innerHeight;
+                const pageBottom = document.body.offsetHeight;
+    
+                // Check if we've reached the bottom of the page
+                if (!typed && scrollPosition >= pageBottom) {
+                    const textElement = document.getElementById('text');
+                    const fullText = "notes from the future. i used to think i knew what i was doing,<br> turns out i was wrong. <br>(shocking i know)<br> <br>here's why";
+                    let index = 22; // Start typing after "My name is"
+    
+                    // Typing effect
+                    function type() {
+                        if (index <= fullText.length) {
+                            textElement.innerHTML = fullText.slice(0, index);
+                            index++;
+                            setTimeout(type, 100); // Adjust typing speed here
+                        }
+                    }
+                    
+                    type();
+                    typed = true; // Prevent further typing
+                }
+            });
+        </script>
 
       
        

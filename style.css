@@ -6,7 +6,8 @@ max-width: 100%;
 
 .body1 {
     background-color: #330000;
-    overflow-y:auto;
+   height:400vh;
+   overflow-y: scroll;
     
    
 
@@ -252,7 +253,7 @@ max-width: 100%;
    
     opacity:0;
     z-index:2;
-  
+    box-shadow: 0 0 18px rgba(0, 0, 0, 0.35);
     animation: pop .1s ease forwards;
     animation-delay:3.8s;
     transform-origin: center center;
@@ -264,25 +265,61 @@ max-width: 100%;
    
     opacity:0;
     z-index:2;
+    box-shadow: 0 0 18px rgba(0, 0, 0, 0.35);
   
     animation: pop .1s ease forwards;
     animation-delay:3.8s;
     transform-origin: center center;
 }
-.floating {
-    margin: auto;
-      animation-name: floating;
-      animation-duration: 4s;
-      animation-iteration-count: infinite;
-      animation-timing-function: ease-in-out;
-  }
-  
-  @keyframes floating {
-      0% { transform: translate(0, 0px); }
-      50% { transform: translate(0, 15px); }
-      100% { transform: translate(0, -0px); }
-  }
-  
+.image-23{
+    position:absolute;
+    margin-top:1150px;
+    margin-left:850px;
+   
+    opacity:0;
+    z-index:2;
+    box-shadow: 0 0 18px rgba(0, 0, 0, 0.35);
+    animation: pop .1s ease forwards;
+    animation-delay:3.8s;
+    transform-origin: center center;
+}
+.image-24{
+    position:absolute;
+    margin-top:1450px;
+    margin-left:50px;
+   
+    opacity:0;
+    z-index:2;
+    box-shadow: 0 0 18px rgba(0, 0, 0, 0.45);
+    animation: pop .1s ease forwards;
+    animation-delay:3.8s;
+    transform-origin: center center;
+}
+.image-25{
+    position:absolute;
+    margin-top:1650px;
+    margin-left:600px;
+   
+    opacity:0;
+    z-index:2;
+    box-shadow: 0 0 18px rgba(0, 0, 0, 0.45);
+    animation: pop .1s ease forwards;
+    animation-delay:3.8s;
+    transform-origin: center center;
+}
+.image-26{
+    position:absolute;
+    margin-top:1850px;
+    margin-left:20px;
+   
+    opacity:0;
+    z-index:2;
+    box-shadow: 0 0 18px rgba(0, 0, 0, 0.45);
+    animation: pop .1s ease forwards;
+    animation-delay:3.8s;
+    transform-origin: center center;
+}
+
 
 
 
@@ -332,7 +369,7 @@ font-style: normal;
     text-align: center;
     transform: translateX(-50%);
     white-space: nowrap;
-    border-right: 8px solid transparent;
+    text-align: left;
     
  position:fixed;
     z-index: 10;
