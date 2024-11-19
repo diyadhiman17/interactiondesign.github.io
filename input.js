@@ -13,6 +13,10 @@ function createStickyNote(content = "Write here...", position = { top: 100, left
   note.contentEditable = true;
   note.innerText = content;
 
+  // Apply a random tilt to the sticky note
+  const randomAngle = Math.floor(Math.random() * 15) - 7.5; // Random tilt between -7.5° and 7.5°
+  note.style.transform = `rotate(${randomAngle}deg)`;  // Apply the rotation to the sticky note
+
   // Add drag functionality
   makeDraggable(note);
 
