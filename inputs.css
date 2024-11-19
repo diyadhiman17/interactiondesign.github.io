@@ -127,21 +127,19 @@ header nav ul li a:hover {
 .sticky-note:active {
     cursor: grabbing;
 }
-
 .delete-btn {
     position: absolute;
     top: 5px;
     right: 5px;
-    font-size: 18px;
-    color: #555;
+    font-size: 16px;
+    color: #721c24; /* Dark red for visibility */
     background: none;
     border: none;
     cursor: pointer;
-    padding: 0;
-    line-height: 1;
-}
-
-.delete-btn:hover {
-    color: red;
-    font-size: 20px;
-}
+  }
+  
+  .delete-btn:hover {
+    color: red; /* Change color on hover for better UX */
+    font-size: 18px; /* Slightly enlarge the cross on hover */
+  }
+  
