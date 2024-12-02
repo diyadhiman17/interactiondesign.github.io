@@ -2,6 +2,7 @@
 img, embed, 
 object, video {                              
 max-width: 100%; 
+height:auto;
 }  
 
 .body1 {
@@ -346,40 +347,50 @@ header {
 /* hero Section */
 #hero {
     font-family: "Spectral", serif;
-    color:#E0DAC4;
+    color: #E0DAC4;
     padding: 50px 20px;
-    text-align: left;   
-     max-width: 1200px; 
-     margin: 0 auto;
-    
-   
-  
+    display: flex;             /* Use Flexbox to center content */
+    justify-content: center;   /* Center horizontally */
+    align-items: center;       /* Center vertically */
+    min-height: 100vh;          /* Ensure the section takes full height of the viewport */
+    text-align: left;
 }
-
 
 #hero h1 {
-    position: absolute;
     font-family: "bulletin-typewriter-mn", sans-serif;
-font-weight: 20;
-font-style: normal;
-    font-size: 15px; 
-    color:white; 
-    left:40%;
-    top:40%;
-    text-align: center;
-    transform: translateX(-50%);
+    font-weight: 20;
+    font-style: normal;
+    font-size: 15px;
+    color: white;
+    text-align: center;        /* Center the text */
     white-space: nowrap;
-    text-align: left;
-    
- position:fixed;
+    overflow: hidden;          /* Prevent the text from overflowing */
+    max-width: max-content;    /* Allow the text to adjust according to its length */
     z-index: 10;
-    overflow: hidden;
-    width:0;
-    max-width:max-content;
-    animation: typing 8s steps(40,end) 3s forwards,
-     blink .75s step-end 2.6s infinite alternate;
-
+    animation: typing 8s steps(40, end) 3s forwards, blink .75s step-end 2.6s infinite alternate;
 }
+#hero img#image-13 {
+    position: absolute;         /* Position it absolutely within the hero section */
+    top: 50%;                    /* Place image in the center vertically */
+    left: 50%;                   /* Place image in the center horizontally */
+    transform: translate(-50%, -50%);
+    max-width: 100%;        /* Ensure the image scales to fit within the container */
+    max-height: 100%;  /* Adjust the position to exactly center the image */
+    z-index: 5;                 /* Ensure the image is above other content */
+}
+
+@media (max-width: 768px) {
+    #hero h1 {
+        font-size: 12px; /* Smaller font size for mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    #hero h1 {
+        font-size: 10px; /* Even smaller font size for very small screens */
+    }
+}
+
 /*fix space between these two for smaller screens*/
 /*update!! i tried but im giving up :)))*/
 
@@ -738,6 +749,8 @@ ul.resources  li{
     color:#C0BB95;
     line-height: 1.6;
     font-size:0.8rem;
+    margin: 0;
+    padding: 0;
    
 
 }
@@ -749,7 +762,7 @@ ul.resources  li{
     transform:scale(1.7);
     max-width: 250px;
 
-    margin-top: -250px;
+    margin-top: -300px;
     margin-left:1000px;
 }
 
@@ -817,13 +830,59 @@ ul.resources  li{
 
 
 @media (max-width: 768px) {
-    .about-content {
-        flex-direction: column;
-        text-align: center;
+    /* Adjust the font size and layout for tablets and smaller screens */
+    .about-content h1 {
+        font-size: 3rem;
     }
-    
-    .image {
-        margin-top: 20px;
+
+    .about-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .about-content h3, .about-content h4, .about-content h5, .about-content h6 {
+        font-size: 0.9rem;
+    }
+
+    .about-section .container {
+        width: 25%;
+    }
+
+    nav ul {
+        flex-direction: column; /* Stack the nav items vertically on smaller screens */
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Further adjustments for small screens like phones */
+    .about-content h1 {
+        font-size: 2.5rem;
+
+    }
+
+    .about-content h2 {
+        font-size: 1.2rem;
+        text-align: left;
+    }
+
+    .about-content h3, .about-content h4, .about-content h5, .about-content h6 {
+        font-size: 0.8rem;
+        text-align: left;
+    }
+
+    .image img {
+        max-width: 200px; /* Reduce the image size on smaller screens */
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 10px 0;
     }
 }
 

@@ -1,0 +1,81 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Georgia', serif;
+    color: #2E2E2E;
+    background-color: #F5F5F5;
+  }
+  
+  /* About Section */
+  .about-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+  }
+  
+  .container {
+    max-width: 1200px;
+    background-color: #FFFFFF;
+    padding: 50px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .title {
+    font-size: 48px;
+    text-align: center;
+    color: #3A593F;
+    margin-bottom: 50px;
+  }
+  
+  /* Grid Layout */
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    align-items: center;
+  }
+  
+  .grid-item {
+    text-align: left;
+  }
+  
+  .grid-item.image {
+    grid-column: span 1;
+    text-align: center;
+  }
+  
+  .grid-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  /* Text Styling */
+  .number {
+    font-size: 36px;
+    color: #3A593F;
+  }
+  
+  .subtitle {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px 0 5px;
+  }
+  
+  .description {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .grid-item.image {
+      grid-column: span 1;
+    }
+  }
+  

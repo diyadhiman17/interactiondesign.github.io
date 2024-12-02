@@ -1,0 +1,134 @@
+/* Reset styles for consistent appearance */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f2eceb;
+    color: #fff;
+    overflow-x: hidden;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column; /* Images stack vertically */
+    margin-left: 200px;
+    margin-top: 90px;
+    padding: 20px;
+  }
+  /* Target odd-numbered images */
+
+  
+  .image-container img {
+    width: 100%; /* Imagesspan the entire row */
+    max-width: 350px; /* Ensure a consistent maximum width */
+    margin: 20px 0;
+    opacity: 0; /* Hidden by default */
+    transform: translateY(50px); /* Start slightly below */
+    transition: opacity 1s ease-out, transform 1s ease-out; /* Smooth fade and slide */
+  }
+  .image-container:nth-child(odd) img {
+    margin-left: 30px; /* Adjust left margin for odd images */
+    margin-right: 10px; /* Adjust right margin for odd images */
+  }
+  
+  /* Target even-numbered images */
+  .image-container:nth-child(even) img {
+    margin-left: 700px; /* Adjust left margin for even images */
+    margin-right: 30px; /* Adjust right margin for even images */
+  }
+  
+  /* Add visibility styles when the image is in the viewport */
+  .image-container img.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; /* Header takes the full width */
+    padding: 10px 20px; /* Adjust padding as needed */
+    box-sizing: border-box; /* Include padding in the width calculation */
+    z-index: 1000; /* Ensure it stays on top */
+    background: none; /* No background */
+    color: #E0DAC4; /* Text color */
+}
+
+/* Navigation within the header */
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: left; /* Align links to the left */
+}
+
+header nav ul li {
+    margin-right: 25px; /* Space between navigation items */
+}
+
+header nav ul li a {
+    font-family: "Spectral", serif;
+    font-weight: light; 
+    color: #9B9859;
+    text-decoration: none; 
+    font-size: 16px;
+}
+
+header nav ul li a:hover {
+    color: #E0DAC4;
+    cursor: pointer;
+}
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: white;
+  color: #333;
+  display: flex;
+  max-width: 100%;
+  
+  overflow: hidden;
+}
+
+.modal-content img {
+  max-width: 100%;
+  object-fit: cover;
+}
+
+#modal-description {
+  padding: 20px;
+  font-size: 16px;
+  line-height: 1.5;
+  flex: 1;
+}
+
+.close {
+  position: absolute;
+  top: -500px;
+  right: 10px;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.close:hover {
+  color: #ccc;
+}
