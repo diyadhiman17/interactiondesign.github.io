@@ -12,63 +12,66 @@ function createStickyNote(content = "", position = { top: 100, left: 100 }, colo
   note.style.left = `${position.left}px`;
   note.contentEditable = true;
 
-  // Add the content to the note (set only user text, exclude delete button)
-  note.dataset.content = content; // Save content in a data attribute
+  // Add the content to the note
+  note.dataset.content = content;
   note.innerText = content;
 
-  // Apply a random tilt to the sticky note
-  const randomAngle = Math.floor(Math.random() * 15) - 7.5; // Random tilt between -7.5° and 7.5°
-  note.style.transform = `rotate(${randomAngle}deg)`;
-
-  // Create and add a delete button
+  // Add a delete button
   const deleteButton = document.createElement('button');
   deleteButton.innerText = 'X';
   deleteButton.classList.add('delete-btn');
   deleteButton.addEventListener('click', () => {
-    note.remove(); // Remove note from the DOM
-    saveNotes(); // Save updated notes to localStorage
+    note.remove();
+    saveNotes();
   });
 
-  note.appendChild(deleteButton); // Append the delete button to the note
+  note.appendChild(deleteButton);
 
-  // Add drag functionality
+  // Make draggable
   makeDraggable(note);
 
   // Save notes on content change
   note.addEventListener('input', () => {
-    note.dataset.content = note.innerText; // Update the data-content attribute
+    note.dataset.content = note.innerText;
     saveNotes();
   });
 
   container.appendChild(note);
 }
 
-// Function to generate a random color class
-function getRandomColorClass() {
-  const colors = ['pink', 'green', 'blue', 'yellow'];
-  return colors[Math.floor(Math.random() * colors.length)];
-}
-
-// Make sticky notes draggable
+// Function to make sticky notes draggable
 function makeDraggable(note) {
+  let isDragging = false;
   let offsetX, offsetY;
 
   note.addEventListener('mousedown', (e) => {
-    offsetX = e.offsetX;
-    offsetY = e.offsetY;
+    isDragging = true;
+    offsetX = e.clientX - note.getBoundingClientRect().left;
+    offsetY = e.clientY - note.getBoundingClientRect().top;
 
     const onMouseMove = (event) => {
-      note.style.left = `${event.clientX - offsetX}px`;
-      note.style.top = `${event.clientY - offsetY}px`;
+      if (isDragging) {
+        note.style.left = `${event.clientX - offsetX}px`;
+        note.style.top = `${event.clientY - offsetY}px`;
+      }
+    };
+
+    const onMouseUp = () => {
+      isDragging = false;
+      document.removeEventListener('mousemove', onMouseMove);
+      document.removeEventListener('mouseup', onMouseUp);
+      saveNotes();
     };
 
     document.addEventListener('mousemove', onMouseMove);
-
-    note.addEventListener('mouseup', () => {
-      document.removeEventListener('mousemove', onMouseMove);
-      saveNotes();
-    }, { once: true });
+    document.addEventListener('mouseup', onMouseUp);
   });
+}
+
+// Generate a random color class
+function getRandomColorClass() {
+  const colors = ['pink', 'green', 'blue', 'yellow'];
+  return colors[Math.floor(Math.random() * colors.length)];
 }
 
 // Save all notes to localStorage
@@ -76,10 +79,10 @@ function saveNotes() {
   const notes = [];
   document.querySelectorAll('.sticky-note').forEach((note) => {
     notes.push({
-      content: note.dataset.content, // Save content from the data-content attribute
+      content: note.dataset.content,
       position: {
-        top: parseInt(note.style.top),
-        left: parseInt(note.style.left),
+        top: parseInt(note.style.top, 10),
+        left: parseInt(note.style.left, 10),
       },
       colorClass: Array.from(note.classList).find((cls) =>
         ['pink', 'green', 'blue', 'yellow'].includes(cls)
