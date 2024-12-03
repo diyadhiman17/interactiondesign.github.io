@@ -2,7 +2,6 @@
 img, embed, 
 object, video {                              
 max-width: 100%; 
-height:auto;
 }  
 
 .body1 {
@@ -347,50 +346,40 @@ header {
 /* hero Section */
 #hero {
     font-family: "Spectral", serif;
-    color: #E0DAC4;
+    color:#E0DAC4;
     padding: 50px 20px;
-    display: flex;             /* Use Flexbox to center content */
-    justify-content: center;   /* Center horizontally */
-    align-items: center;       /* Center vertically */
-    min-height: 100vh;          /* Ensure the section takes full height of the viewport */
-    text-align: left;
+    text-align: left;   
+     max-width: 1200px; 
+     margin: 0 auto;
+    
+   
+  
 }
+
 
 #hero h1 {
+    position: absolute;
     font-family: "bulletin-typewriter-mn", sans-serif;
-    font-weight: 20;
-    font-style: normal;
-    font-size: 15px;
-    color: white;
-    text-align: center;        /* Center the text */
+font-weight: 20;
+font-style: normal;
+    font-size: 15px; 
+    color:white; 
+    left:40%;
+    top:40%;
+    text-align: center;
+    transform: translateX(-50%);
     white-space: nowrap;
-    overflow: hidden;          /* Prevent the text from overflowing */
-    max-width: max-content;    /* Allow the text to adjust according to its length */
+    text-align: left;
+    
+ position:fixed;
     z-index: 10;
-    animation: typing 8s steps(40, end) 3s forwards, blink .75s step-end 2.6s infinite alternate;
-}
-#hero img#image-13 {
-    position: absolute;         /* Position it absolutely within the hero section */
-    top: 50%;                    /* Place image in the center vertically */
-    left: 50%;                   /* Place image in the center horizontally */
-    transform: translate(-50%, -50%);
-    max-width: 100%;        /* Ensure the image scales to fit within the container */
-    max-height: 100%;  /* Adjust the position to exactly center the image */
-    z-index: 5;                 /* Ensure the image is above other content */
-}
+    overflow: hidden;
+    width:0;
+    max-width:max-content;
+    animation: typing 8s steps(40,end) 3s forwards,
+     blink .75s step-end 2.6s infinite alternate;
 
-@media (max-width: 768px) {
-    #hero h1 {
-        font-size: 12px; /* Smaller font size for mobile */
-    }
 }
-
-@media (max-width: 480px) {
-    #hero h1 {
-        font-size: 10px; /* Even smaller font size for very small screens */
-    }
-}
-
 /*fix space between these two for smaller screens*/
 /*update!! i tried but im giving up :)))*/
 
@@ -438,26 +427,6 @@ header nav ul li a:hover {
     color:#E0DAC4;
     cursor:pointer;
 }
-
-
-/*@media (max-width: 768px) {
-    .content-wrapper {
-        flex-direction: column; 
-    }
-
-    .content-wrapper img {
-        width: 100%; 
-    }
-
-    .content-wrapper p {
-        max-width: 100%;
-    }
-
-    #vintage-layout h1 {
-        font-size: 3rem; 
-    }
-}*/
-
 .body2 {
     background-color:#330000;
     margin: 0;
