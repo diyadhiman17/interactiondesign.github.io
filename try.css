@@ -84,3 +84,39 @@ header nav ul li a:hover {
     color: #330000;
     cursor: pointer;
 }
+
+  
+@media (max-width: 1024px) {
+  .container {
+      margin-left: 100px; /* Reduce left margin for tablets */
+  }
+
+  .image-container:nth-child(even) img {
+      margin-left: 400px; /* Adjust even images for smaller screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+      margin-left: 20px; /* Reduce left margin for mobile screens */
+  }
+
+  .image-container:nth-child(odd) img,
+  .image-container:nth-child(even) img {
+      margin-left: 20px; /* Align all images consistently on mobile */
+      margin-right: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  
+
+  .image-container img {
+      margin-left: 0; /* Center images on very small screens */
+      margin-right: 0;
+  }
+}
+
+  
+
+
