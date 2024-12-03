@@ -226,7 +226,7 @@ max-width: 100%;
 .image-19{
     position:absolute;
     margin-top:650px;
-    margin-left:650px;
+    margin-left:700px;
    
     opacity:0;
     z-index:2;
@@ -346,7 +346,7 @@ header {
 
 /* hero Section */
 #hero {
-    font-family: "Spectral", serif;
+    font-family: "helvetica", sans-serif;
     color:#E0DAC4;
     padding: 50px 20px;
     text-align: left;   
@@ -431,7 +431,7 @@ header nav ul li {
 }
 
 header nav ul li a {
-    font-family: "Spectral", serif;
+    font-family: "helvetica", sans-serif;
     font-weight: light; 
     color: #9B9859;
     text-decoration: none; 
@@ -443,6 +443,36 @@ header nav ul li a:hover {
     color:#E0DAC4;
     cursor:pointer;
 }
+/* Start Button Styles */
+.start-button {
+    display: none; /* Initially hidden */
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+  
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 2.5rem;
+    font-family: "helvetica", sans-serif;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.start-button.visible {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+.start-button:hover {
+    transform:scale(1.2);
+}
+
 .body2 {
     background-color:#330000;
     margin: 0;

@@ -62,11 +62,30 @@
 
 
         </div>
+        <!-- Start Button -->
+<a id="start-button" href="try.html" class="start-button">start ></a>
+
         
 
       
        
     </section>
+    <script>
+        document.addEventListener("scroll", function () {
+            const startButton = document.getElementById("start-button");
+            const scrollPosition = window.scrollY + window.innerHeight;
+            const pageHeight = document.documentElement.scrollHeight;
+    
+            if (scrollPosition >= pageHeight - 10) {
+                // Reveal the button when near the bottom of the page
+                startButton.classList.add("visible");
+            } else {
+                // Hide the button when not at the bottom
+                startButton.classList.remove("visible");
+            }
+        });
+    </script>
+    
 
    
 
