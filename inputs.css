@@ -39,7 +39,7 @@ header nav ul li {
 }
 
 header nav ul li a {
-    font-family: "Spectral", serif;
+    font-family: "helvetica", sans-serif;
     font-weight: light; 
     color: #9B9859;
     text-decoration: none; 
@@ -79,7 +79,7 @@ header nav ul li a:hover {
     border: none;
     color: #E0DAC4;
     font-size: 30px;
-    font-family: Arial, sans-serif;
+    font-family: "helvetica", sans-serif;
     cursor: pointer;
     margin: 10px;
     padding: 0;

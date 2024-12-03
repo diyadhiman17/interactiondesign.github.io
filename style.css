@@ -774,11 +774,11 @@ ul.resources  li{
 
 .image img {
     position:fixed;
-    transform:scale(1.7);
-    max-width: 250px;
 
-    margin-top: -300px;
-    margin-left:1000px;
+    max-width: 500px;
+
+    margin-top: -450px;
+    margin-left:800px;
 }
 
 .about-content h1 {
@@ -859,12 +859,10 @@ ul.resources  li{
     }
 
     .about-section .container {
-        width: 25%;
+        width: 75%;
     }
 
-    nav ul {
-        flex-direction: column; /* Stack the nav items vertically on smaller screens */
-    }
+    
 
     nav ul li {
         margin: 5px 0;
@@ -1016,6 +1014,7 @@ a.control:hover {
 }
   .body7{
     background-color:#330000;
+    font-family: "helvetica", sans-serif;
 
   }
   .submit-button {
@@ -1086,4 +1085,24 @@ input:focus, textarea:focus {
 .fade-on-scroll {
     opacity: 0; /* Start at 0% opacity */
     transition: opacity 0.1s ease; /* Smooth transition when opacity changes */
+}
+.hidden {
+    display: none;
+}
+
+#successMessage {
+    margin-top: 20px;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }

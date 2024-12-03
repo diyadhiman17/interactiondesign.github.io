@@ -7,7 +7,7 @@
   
   body {
     font-family: Arial, sans-serif;
-    background-color: #330000;
+    background-color: #E0DAC4;
     color: #fff;
     overflow-x: hidden;
   }
@@ -24,7 +24,7 @@
   
   .image-container img {
     width: 100%; /* Imagesspan the entire row */
-    max-width: 350px; /* Ensure a consistent maximum width */
+    max-width: 500px; /* Ensure a consistent maximum width */
     margin: 20px 0;
     opacity: 0; /* Hidden by default */
     transform: translateY(50px); /* Start slightly below */
@@ -73,7 +73,7 @@ header nav ul li {
 }
 
 header nav ul li a {
-    font-family: "Spectral", serif;
+    font-family: "helvetica", sans-serif;
     font-weight: light; 
     color: #9B9859;
     text-decoration: none; 
@@ -81,6 +81,6 @@ header nav ul li a {
 }
 
 header nav ul li a:hover {
-    color: #E0DAC4;
+    color: #330000;
     cursor: pointer;
 }
