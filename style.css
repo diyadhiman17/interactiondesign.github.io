@@ -6,7 +6,7 @@ max-width: 100%;
 
 .body1 {
     background-color: #330000;
-   height:400vh;
+   height:450vh;
    overflow-y: scroll;
     
    
@@ -74,8 +74,8 @@ max-width: 100%;
     
     position:absolute;
     margin-top:-290px;
-    margin-left:1100px;
-    box-shadow:0px 0px 18px rgba(0, 0, 0, 0.35);
+    margin-left:900px;
+    box-shadow:0px 0px 18px rgba(0, 0, 0, 0.45);
     opacity:0;
     z-index:1;
     animation: pop .1s ease forwards;
@@ -152,14 +152,15 @@ max-width: 100%;
     transform-origin: center center;
 }
 .image-13{
-    position:relative;
-    margin-top:-320px;
-    margin-left:320px;
-   box-shadow:0px 0px 18px rgba(0, 0, 0, 0.35);
-    z-index:5;
+    position: fixed;
+    top: 40%; /* Center vertically based on the viewport */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Perfect centering */
+    width: 80vw; /* Adjust size responsively */
+    max-width: 500px; /* Prevent it from getting too large */
     opacity:0;
-    position:fixed;
-    
+    z-index: 5;
+    box-shadow: 0px 0px 18px rgba(0, 0, 0, 0.35);
     animation: pop .1s ease forwards;
     animation-delay:2.6s;
     transform-origin: center center;
@@ -200,8 +201,8 @@ max-width: 100%;
 }
 .image-17{
     position:absolute;
-    margin-top:700px;
-    margin-left:-50px;
+    margin-top:950px;
+    margin-left:300px;
    
     opacity:0;
     z-index:1;
@@ -212,8 +213,8 @@ max-width: 100%;
 }
 .image-18{
     position:absolute;
-    margin-top:400px;
-    margin-left:-100px;
+    margin-top:500px;
+    margin-left:100px;
    
     opacity:0;
     z-index:2;
@@ -225,7 +226,7 @@ max-width: 100%;
 .image-19{
     position:absolute;
     margin-top:650px;
-    margin-left:900px;
+    margin-left:650px;
    
     opacity:0;
     z-index:2;
@@ -237,7 +238,7 @@ max-width: 100%;
 .image-20{
     position:absolute;
     margin-top:600px;
-    margin-left:1100px;
+    margin-left:900px;
    
     opacity:0;
     z-index:2;
@@ -248,8 +249,8 @@ max-width: 100%;
 }
 .image-21{
     position:absolute;
-    margin-top:800px;
-    margin-left:500px;
+    margin-top:1200px;
+    margin-left:10px;
    
     opacity:0;
     z-index:2;
@@ -260,7 +261,7 @@ max-width: 100%;
 }
 .image-22{
     position:absolute;
-    margin-top:1150px;
+    margin-top:1650px;
     margin-left:250px;
    
     opacity:0;
@@ -273,7 +274,7 @@ max-width: 100%;
 }
 .image-23{
     position:absolute;
-    margin-top:1150px;
+    margin-top:1450px;
     margin-left:850px;
    
     opacity:0;
@@ -286,7 +287,7 @@ max-width: 100%;
 .image-24{
     position:absolute;
     margin-top:1450px;
-    margin-left:50px;
+    margin-left:750px;
    
     opacity:0;
     z-index:2;
@@ -309,8 +310,8 @@ max-width: 100%;
 }
 .image-26{
     position:absolute;
-    margin-top:1850px;
-    margin-left:20px;
+    margin-top:1950px;
+    margin-left:520px;
    
     opacity:0;
     z-index:2;
@@ -358,28 +359,43 @@ header {
 
 
 #hero h1 {
-    position: absolute;
+    position: fixed;
     font-family: "bulletin-typewriter-mn", sans-serif;
-font-weight: 20;
-font-style: normal;
-    font-size: 15px; 
-    color:white; 
-    left:40%;
-    top:40%;
-    text-align: center;
-    transform: translateX(-50%);
-    white-space: nowrap;
+    font-weight: 400; /* Adjust to desired weight */
+    font-style: normal;
+    font-size: 1.3vw; /* Adjust dynamically based on viewport width */
+    color: white;
+    left: 42%; /* Center horizontally relative to viewport */
+    top: 45%; /* Position vertically relative to viewport */
+    transform: translate(-50%, -50%); /* Ensure perfect centering */
     text-align: left;
-    
- position:fixed;
+    white-space: nowrap;
     z-index: 10;
     overflow: hidden;
-    width:0;
-    max-width:max-content;
-    animation: typing 8s steps(40,end) 3s forwards,
-     blink .75s step-end 2.6s infinite alternate;
-
+    width: 0;
+    max-width: max-content;
+    animation: typing 9s steps(40, end) 3s forwards,
+               blink .75s step-end 2.6s infinite alternate;
 }
+@media (max-width: 908px) {
+    #hero h1 {
+        font-size: 1.6vw; /* Scale font size for smaller devices */
+        top: 45%; /* Adjust vertical position for better fit */
+        left:32%;
+    }
+}
+
+/* Add media queries for smaller screen sizes */
+@media (max-width: 768px) {
+    #hero h1 {
+        font-size: 1.9vw; /* Scale font size for smaller devices */
+        top: 45%; /* Adjust vertical position for better fit */
+        left:27%;
+    }
+}
+
+
+
 /*fix space between these two for smaller screens*/
 /*update!! i tried but im giving up :)))*/
 
