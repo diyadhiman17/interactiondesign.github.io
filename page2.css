@@ -1,0 +1,270 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    cursor:none;
+  }
+  
+  body {
+    font-family: 'Helvetica', sans-serif;
+    color: black;
+    background-color: #FFFDF5;
+    line-height: 1.5;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr); /* 12-column grid for manual positioning */
+    grid-template-rows: repeat(12, minmax(50px, auto)); /* 12 rows for grid positioning */
+    gap: 10px;
+    height: 250vh;
+    margin: 0;
+    
+  }
+  
+  
+  header {
+    position: sticky;
+    top:0;
+    grid-column: 9/ -1;
+    padding-left: 35px;
+    grid-row: 1;
+    
+    z-index:10;
+  }
+  
+  nav ul {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    list-style: none;
+  }
+  nav ul li{
+    font-family: "IBM Plex Mono", serif;
+  }
+  
+  nav ul li a {
+    font-family: "IBM Plex Mono", serif;
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    font-weight: 400;
+  }
+  nav ul li a:hover {
+    color: gray; 
+  }
+  
+  
+  .text{
+    position: relative;
+    display:grid;
+    grid-template-columns: repeat(12, 1fr); /* Align with the body grid */ 
+     grid-template-rows: auto; /* Auto height for rows */ 
+      gap: 10px; /* Space between grid items */  
+      grid-column: 1 / -1;
+  }
+  
+  .background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1; /* ensures it stays behind all content */
+    width: 100vw;
+    height: 100vh;
+   
+    
+  }
+  
+  .background-image img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    width: 300px;
+    opacity: 0.9;
+   
+    pointer-events: auto;
+  }
+  #bg1 {
+    width:400px;
+    top: 30%;  /* Set the vertical position of the first image */
+    left: 93%;  /* Set the horizontal position of the first image */
+  }
+  
+  #bg2 {
+    width:250px;
+    top: 50%;  /* Set the vertical position of the second image */
+    left: 50%;  /* Set the horizontal position of the second image */
+  }
+  
+  #bg3 {
+    width:350px;
+    top: 70%;  /* Set the vertical position of the third image */
+    left: 8%;  /* Set the horizontal position of the third image */
+  }
+  
+  .h1-section {
+    font-family: "kepler-std", serif;
+    font-weight: 400;
+    font-style: normal;
+    position: fixed; 
+    text-wrap: nowrap;
+    line-height: 1;
+    color: black;
+    font-size: 100px;
+    
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);   
+    text-align: center; 
+    
+}
+
+  
+  
+  .h2-section {
+    font-family: "IBM Plex Mono", serif;
+    font-weight: 600;
+    font-style: normal;
+    position: relative;
+   text-transform: lowercase;
+    font-size:16px;
+    padding-top: 850px;
+    
+    grid-column: 2 / span 3;
+    grid-row: 4 / span 2;
+  }
+  
+  .h3-section {
+    font-family: "IBM Plex Mono", serif;
+    font-weight: 400;
+    font-style: normal;
+    position: relative;
+    font-size:16px;
+    text-transform: lowercase;
+    padding-top: 120px;
+    grid-column: 4 / span 4;
+    grid-row: 6 ;
+  }
+  
+  .h4-section {
+    font-family: "IBM Plex Mono", serif;
+    font-weight: 400;
+    font-style: normal;
+    position: relative;
+    text-transform: lowercase;
+    padding-top: 120px;
+    font-size:16px;
+    
+    grid-column: 8 / span 4;
+    grid-row: 7;
+  }
+  .h5-section{
+    font-family: "IBM Plex Mono", serif;
+    font-weight: 400;
+    font-style: normal;
+    position: relative;
+    text-transform: lowercase;
+    font-size:16px;
+    padding-top: 120px;
+     grid-column: 2 / span 4; 
+    grid-row: 8;
+  }
+  .h6-section{
+    font-family: "IBM Plex Mono", serif;
+    font-weight: 400;
+    font-style: normal;
+    position: relative;
+    text-transform: lowercase;
+    font-size:16px;
+   
+   
+    grid-column: 8 / span 4; 
+    grid-row: 9;
+  }
+  
+  
+  
+   p {
+    position: relative;
+    text-transform: lowercase;
+    font-size:12px;
+    font-weight:100;
+    padding-left: 50px;
+    grid-column: 3 / span 2; 
+    grid-row: 16;
+  }
+  /* Initially hidden elements */
+.h2-section, .h3-section, .h4-section, .h5-section, .h6-section, p {
+  opacity: 0;
+  transform: translateY(30px); /* Slight movement */
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* When elements are in view */
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.custom-cursor {
+  position: fixed;
+  width: 20px;  /* Size of the cursor */
+  height: 20px;
+  background-color: #ba3b3b;
+  border-radius: 50%;
+  pointer-events: none; /* Prevents interfering with clicks */
+  z-index: 9999; /* Keeps it on top */
+  transform: translate(-50%, -50%); /* Centers the dot */
+}
+p a {
+  text-decoration: none; /* Removes the underline */
+  color: black; /* Matches the design */
+  font-weight: 400;
+  transition: color 0.3s ease;
+}
+
+p a:hover {
+  color: gray; /* Changes color on hover */
+}
+
+.h6-section a {
+  text-decoration: none; /* Removes the underline */
+  color: black; /* Matches the design */
+  font-weight: 400;
+  transition: color 0.3s ease;
+}
+
+.h6-section a:hover{
+color: gray;
+}
+@media (max-width: 768px) {
+  body{
+    height:450vh;
+  }
+  nav ul {
+    flex-direction: column;
+    align-items: flex-start; /* Aligns to the left, change to center if preferred */
+    gap: 10px; /* Adds spacing between items */
+  }
+
+  .h1-section {
+    max-width: 500px;
+    font-size: 80px; /* Adjust as needed */
+  }
+  .h2-section{
+    font-size:10px;
+  }
+  .h3-section{
+    font-size:10px;
+  }
+  .h4-section{
+    font-size:10px;
+  }
+  .h5-section{
+    font-size:10px;
+  }
+  .h6-section{
+    font-size:10px;
+  }
+  .mainlinks ul li a {
+    font-size: 24px; /* Smaller font size for mobile */
+  }
+}

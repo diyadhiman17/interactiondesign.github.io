@@ -1,56 +1,53 @@
 /* styles.css */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #330000;
+    font-family: "IBM Plex Mono", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: black;
+    background-color: #FFFDF5;
+    line-height: 1.5;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr); /* 12-column grid for manual positioning */
+    grid-template-rows: repeat(12, minmax(50px, auto)); /* 12 rows for grid positioning */
+    gap: 10px;
+    height: 250vh;
     margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    overflow: hidden;
-}
-
-/* Position the header at the top-left without a background */
+    
+  }
+/* Sticky Header */
 header {
-    position: fixed;
+    position: sticky;
     top: 0;
-    left: 0;
-    width: 100%; /* Header takes the full width */
-    padding: 10px 20px; /* Adjust padding as needed */
-    box-sizing: border-box; /* Include padding in the width calculation */
-    z-index: 1000; /* Ensure it stays on top */
-    background: none; /* No background */
-    color: #E0DAC4; /* Text color */
-}
-
-/* Navigation within the header */
-header nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+    grid-column: 9 / -1;
+    padding-left: 35px;
+    grid-row: 1;
+    z-index: 10;
+  }
+  
+  /* Nav Styles */
+  nav ul {
     display: flex;
-    justify-content: left; /* Align links to the left */
-}
-
-header nav ul li {
-    margin-right: 25px; /* Space between navigation items */
-}
-
-header nav ul li a {
-    font-family: "helvetica", sans-serif;
-    font-weight: light; 
-    color: #9B9859;
-    text-decoration: none; 
+    justify-content: space-between;
+    padding: 10px 20px;
+    list-style: none;
+  }
+  
+  nav ul li {
+    font-family: "IBM Plex Mono", monospace;
+  }
+  
+  nav ul li a {
+    font-family: "IBM Plex Mono", monospace;
+    text-decoration: none;
+    color: black;
     font-size: 16px;
-}
-
-header nav ul li a:hover {
-    color: #E0DAC4;
-    cursor: pointer;
-}
-
+    font-weight: 400;
+  }
+  
+  nav ul li a:hover {
+    color: gray;
+  }
+  
 /* Styling for other page elements */
 #notes-container {
     position: relative;
@@ -68,7 +65,7 @@ header nav ul li a:hover {
 #suggestions-text {
     font-weight: 50;
     font-size: 50px;
-    color: #E0DAC4;
+    color: black;
     margin-bottom: 8px;
     font-weight: bold;
 }
@@ -77,9 +74,9 @@ header nav ul li a:hover {
 #add-note-btn {
     background: none;
     border: none;
-    color: #E0DAC4;
+    color: black;
     font-size: 30px;
-    font-family: "helvetica", sans-serif;
+   
     cursor: pointer;
     margin: 10px;
     padding: 0;
